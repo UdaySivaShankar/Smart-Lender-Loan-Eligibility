@@ -77,15 +77,6 @@ Then open **http://localhost:5000** in your browser.
 7. **Model Selection & Storage** — XGBoost is saved to `model/rdf.pkl` along
    with its label encoders and scaler, ready for the Flask app to load
 
-## Deploying to IBM Cloud
-
-1. Push this project to a Git repository.
-2. Create an IBM Cloud **Code Engine** or **Cloud Foundry** app.
-3. Point it at this repo; IBM Cloud will detect `requirements.txt` and
-   `Procfile` automatically and run `gunicorn app:app`.
-4. Set the app's port to match `$PORT` (gunicorn handles this automatically
-   via the Procfile).
-
 ## Retraining with new data
 
 Any time you update `dataset/loan_data.csv`, just re-run:
