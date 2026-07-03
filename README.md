@@ -63,7 +63,7 @@ python model/train_model.py
 python app.py
 ```
 
-Then open **http://localhost:5000** in your browser.
+Then open **https://smart-lender-loan-eligibility.onrender.com/** in your browser.
 
 ## Pipeline Overview (`model/train_model.py`)
 
