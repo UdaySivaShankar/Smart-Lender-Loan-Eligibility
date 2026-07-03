@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Lender | Loan Eligibility Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <nav>
+    <a class="brand" href="{{ url_for('home') }}">🏦 Smart Lender</a>
+    <div class="links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('predict_form') }}">Check Eligibility</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Smart Lender</h1>
+      <p>
+        A machine-learning powered loan eligibility prediction system that helps
+        banks and financial institutions make faster, data-driven approval decisions.
+      </p>
+      <a class="btn" href="{{ url_for('predict_form') }}">Check Loan Eligibility →</a>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="value">{{ model_name }}</div>
+        <div class="label">Deployed Model</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">{{ train_accuracy }}%</div>
+        <div class="label">Training Accuracy</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">{{ test_accuracy }}%</div>
+        <div class="label">Testing Accuracy</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>How It Works</h2>
+      <p style="color:var(--muted)">
+        Applicants submit their personal, financial and property details through
+        a simple form. The trained model instantly evaluates the application and
+        predicts whether the loan is likely to be <strong>approved</strong> or
+        <strong>rejected</strong>, allowing credit officers to fast-track
+        low-risk cases and flag high-risk ones for further review.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <h3>📊 Data-Driven Decisions</h3>
+        <p>Trained on applicant income, credit history, employment and property data.</p>
+      </div>
+      <div class="feature">
+        <h3>⚡ Instant Predictions</h3>
+        <p>Get an approval / rejection result in real time, right in the browser.</p>
+      </div>
+      <div class="feature">
+        <h3>🌳 Best-in-Class Model</h3>
+        <p>Decision Tree, Random Forest, KNN and XGBoost were compared; the strongest performer is deployed.</p>
+      </div>
+      <div class="feature">
+        <h3>☁️ Cloud Ready</h3>
+        <p>Built with Flask for easy deployment to IBM Cloud or any web host.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>Smart Lender &mdash; Loan Eligibility Prediction System</footer>
+</body>
+</html>
